@@ -16,7 +16,7 @@ export default function HomeSearch() {
   
   const randomSearch = async (e) => {
     setRandomSearchLoading(true);
-    const response = await fetch ('https://random-word-api.herokuapp.com/word')
+    const response = await fetch ('https://random-word-api.vercel.app/api?words=1')
     .then((res) => res.json())
     .then((data)=> data[0]);
     if(!response) return;
@@ -48,8 +48,7 @@ export default function HomeSearch() {
         <button
           className="bg-[#f8f9fa] rounded-md
         text-sm text-gray-800 hover:ring-gray-200 focus:outline-none
-        active:ring-gray-300 hover:shadow-md w-36 h-10 transition-shadow
-        disabled:opacity-80 disabled: shadow-sm" 
+        active:ring-gray-300 hover:shadow-md w-36 h-10 transition-shadow" 
           onClick={handleSubmit}
         >
           Google Search
@@ -58,7 +57,8 @@ export default function HomeSearch() {
         disabled={randomSearchLoading}
           className="bg-[#f8f9fa] rounded-md
         text-sm text-gray-800 hover:ring-gray-200 focus:outline-none
-        active:ring-gray-300 hover:shadow-md w-36 h-10 transition-shadow"
+        active:ring-gray-300 hover:shadow-md w-36 h-10 transition-shadow
+        disabled:opacity-80 disabled: shadow-sm"
           onClick={randomSearch}
         >
          {randomSearchLoading ? 'Loading...' : 'I am feeling lucky'}
