@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function loading() {
+export default function Loading() {
   return (
     <div className='pt-10 mx-2 lg:pl-52 mx-2-6xl flex sm:space-x-4 flex-col sm:flex-row pb-42'>
      <div className='animapte-pulse'>
