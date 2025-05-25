@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Loading() {
+export default function loading() {
   return (
     <>
     <div className='mx-2 pt-10 max-w-6xl lg:pl-52
